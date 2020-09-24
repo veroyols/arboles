@@ -1,0 +1,5 @@
+C:\Users\veros\Documents\GitHub\arboles\practica1\Ejercicio 5\bin\Debug\Ejercicio 5.exe
+C:\Users\veros\Documents\GitHub\arboles\practica1\Ejercicio 5\bin\Debug\Ejercicio 5.pdb
+C:\Users\veros\Documents\GitHub\arboles\practica1\Ejercicio 5\obj\Debug\Ejercicio 5.csprojResolveAssemblyReference.cache
+C:\Users\veros\Documents\GitHub\arboles\practica1\Ejercicio 5\obj\Debug\Ejercicio 5.exe
+C:\Users\veros\Documents\GitHub\arboles\practica1\Ejercicio 5\obj\Debug\Ejercicio 5.pdb
