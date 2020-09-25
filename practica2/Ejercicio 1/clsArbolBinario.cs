@@ -92,7 +92,6 @@ namespace Ejercicio_1
 				if (nodo.getHijoDerecho() != null)
 					cola.encolar(nodo.getHijoDerecho());
 			}
-			
 		}
 	
 		public int contarHojas() {
@@ -112,7 +111,14 @@ namespace Ejercicio_1
 			return cdad;
 		}
 		
+
+		
+		
+/*entreNiveles(int n, m) # imprime el recorrido por niveles de los elementos del árbol receptor entre
+los niveles n y m (ambos inclusive). (0≤n<m≤altura del árbol)*/
 		public void recorridoEntreNiveles(int n,int m) {
+		
+	
 		}
 	}
 }

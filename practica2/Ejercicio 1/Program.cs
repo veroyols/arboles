@@ -3,11 +3,8 @@
  * Usuario: veros
  * Fecha: 12/9/2020
  * Hora: 22:34
- * 
- * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
-
 namespace Ejercicio_1
 {
 	class Program
