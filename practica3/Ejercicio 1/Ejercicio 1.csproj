@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ArbolBinarioBusqueda.cs" />
     <Compile Include="AVL.cs" />
+    <Compile Include="cls_Cola.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

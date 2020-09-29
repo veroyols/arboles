@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Ejercicio_1
 {
@@ -42,11 +43,23 @@ namespace Ejercicio_1
 			this.hijoDerecho=null;
 		}
 		
+
+		public void agregar (ArbolBinarioBusqueda insert){
 		// si se encuentra un punto de inserción → crear nuevo vértice
-		// si el valor a ser insertado < this clave → 	ir a izquierda; 
+		if ((insert.getDatoRaiz() < this.getDatoRaiz()) && this.getHijoIzquierdo() == null) 
+		this.agregarHijoIZquierdo(insert);
+		
+		if ((insert.getDatoRaiz() > this.getDatoRaiz()) && this.getHijoDerecho() == null) 
+		this.agregarHijoDerecho()(insert);
+
+		
+		// si el valor a ser insertado < this clave → 	ir a izquierda;
+		if ((insert.getDatoRaiz() < this.getDatoRaiz()) && this.getHijoIzquierdo() !=null) 
+		this.getHijoIzquierdo().agregar(insert);
+		
 		// sino ir a derecha
-		public void agregar(IComparable elem) {
-			Console.WriteLine((this.getDatoRaiz()));
+		if ((insert.getDatoRaiz() > this.getDatoRaiz()) && this.getHijoDerecho() !=null) 
+		this.getHijoDerecho().agregar(insert);
 		}
 		
 		public bool incluye(IComparable elem) {
