@@ -43,7 +43,7 @@ namespace Ejercicio_1
 			this.hijoDerecho=null;
 		}
 		
-
+		//VER QUE ONDA ESTO
 		public void agregar (ArbolBinarioBusqueda insert){
 		// si se encuentra un punto de inserción → crear nuevo vértice
 		if ((insert.getDatoRaiz() < this.getDatoRaiz()) && this.getHijoIzquierdo() == null) 
