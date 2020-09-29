@@ -9,8 +9,9 @@ namespace Ejercicio_1
 		private ArbolBinarioBusqueda hijoIzquierdo;
 		private ArbolBinarioBusqueda hijoDerecho;
 		
+		/*CONSTRUCTOR*/
 		public ArbolBinarioBusqueda(IComparable dato){
-			this.raiz = dato;
+			this.dato = dato;
 		}
 		
 		public IComparable getDatoRaiz(){
@@ -41,7 +42,11 @@ namespace Ejercicio_1
 			this.hijoDerecho=null;
 		}
 		
+		// si se encuentra un punto de inserción → crear nuevo vértice
+		// si el valor a ser insertado < this clave → 	ir a izquierda; 
+		// sino ir a derecha
 		public void agregar(IComparable elem) {
+			Console.WriteLine((this.getDatoRaiz()));
 		}
 		
 		public bool incluye(IComparable elem) {

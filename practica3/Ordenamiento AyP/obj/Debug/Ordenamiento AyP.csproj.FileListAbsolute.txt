@@ -1,0 +1,5 @@
+C:\Users\veros\Documents\GitHub\arboles\practica3\Ordenamiento AyP\bin\Debug\Ordenamiento AyP.exe
+C:\Users\veros\Documents\GitHub\arboles\practica3\Ordenamiento AyP\bin\Debug\Ordenamiento AyP.pdb
+C:\Users\veros\Documents\GitHub\arboles\practica3\Ordenamiento AyP\obj\Debug\Ordenamiento AyP.csprojResolveAssemblyReference.cache
+C:\Users\veros\Documents\GitHub\arboles\practica3\Ordenamiento AyP\obj\Debug\Ordenamiento AyP.exe
+C:\Users\veros\Documents\GitHub\arboles\practica3\Ordenamiento AyP\obj\Debug\Ordenamiento AyP.pdb

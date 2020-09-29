@@ -8,7 +8,7 @@ namespace Ejercicio_1
 		private IComparable dato;
 		private AVL hijoIzquierdo;
 		private AVL hijoDerecho;
-		private int altura;
+		//private int altura;
 		
 		public AVL(IComparable dato){
 			this.dato = dato;

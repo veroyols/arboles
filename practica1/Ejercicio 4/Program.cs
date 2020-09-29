@@ -14,12 +14,16 @@ namespace Ejercicio_4
 	{
 		public static void Main(string[] args)
 		{
+			//nivel 0
 			ArbolGeneral <int> raiz = new ArbolGeneral <int> (1);
+			
+			//nivel 1
 			ArbolGeneral <int> unHijo = new ArbolGeneral <int> (2);
 			ArbolGeneral <int> otroHijo = new ArbolGeneral <int> (3);
 			raiz.agregarHijo (unHijo);
 			raiz.agregarHijo (otroHijo);
 			
+			//nivel 2
 			ArbolGeneral <int> hijo4 = new ArbolGeneral <int> (4);
 			ArbolGeneral <int> hijo5 = new ArbolGeneral <int> (5);
 			ArbolGeneral <int> hijo6 = new ArbolGeneral <int> (6);
@@ -27,16 +31,43 @@ namespace Ejercicio_4
 			otroHijo.agregarHijo(hijo5);
 			otroHijo.agregarHijo(hijo6);
 			
+			//nivel 3
 			ArbolGeneral <int> nivel3 = new ArbolGeneral <int> (7);
 			hijo6.agregarHijo(nivel3);
-			nivel3.agregarHijo(new ArbolGeneral <int> (8)); //Como agrego un hijo al hijo de nivel3 si lo instancio en el paramtro 
+			
+			//nivel 4
+			nivel3.agregarHijo(new ArbolGeneral<int> (8)); //no tiene nombre de referencia
 			
 //			Para imprimir hijos
-//			foreach (ArbolGeneral<int> element in raiz.getHijos()) {
-//				Console.WriteLine(element.getDatoRaiz());
+//			foreach (ArbolGeneral<int> ele in raiz.getHijos()) {
+//				Console.WriteLine(ele.getDatoRaiz());
 //			}
 			
 			Console.WriteLine(raiz);
+			
+			Console.WriteLine ("\npreOrden");
+			raiz.preOrden();
+			
+			Console.WriteLine ("\ninOrden");
+			raiz.inOrden();
+			
+			Console.WriteLine ("\npostOrden");
+			raiz.postOrden();
+			
+			Console.WriteLine ("\nporNiveles");
+			raiz.porNiveles();
+			
+			Console.WriteLine();
+			
+/*nivel(Object dato):int devuelve el nivel o profundidad (nivel de la raiz = 0) del dato en el árbol, la longitud de la raíz al nodo.
+Pista: Si el nodo raíz posee el mismo dato que pasado como parámetro, se retorna 0. En caso contrario, se debe buscar en cuales de los subárbo -
+les hijos se encuentra el dato (implemente el mensaje include (Object dato) en la clase Arbol General) y se debe retornar 1 más el nivel que arroje
+enviar el mensaje nivel() al subárbol que incluye el dato.*/
+			int dato = 6;			
+			if (dato == raiz.getDatoRaiz()) 
+				Console.WriteLine ("El dato {0} y se encuentra en la raiz", dato);
+			Console.WriteLine ("El dato {0} y no se encuentra en la raiz", dato);
+		
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);

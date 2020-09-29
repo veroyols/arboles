@@ -31,6 +31,51 @@ namespace Ejercicio_4
 		public bool esHoja() {
 			return this.getHijos().Count == 0;
 		}
+		
+		//ORDENAMIENTO
+		public void preOrden () {
+			//raiz
+			Console.Write (this.getDatoRaiz()+" ");
+			//los hijos recursivamente
+			foreach (var hijos in this.getHijos())
+				hijos.preOrden();
+		}
+		
+		//ok
+		public void inOrden () {
+			//primer hijo recursivamente
+			if (this.getHijos().Count > 0 ) 
+				this.getHijos()[0].inOrden();
+			//raiz
+			Console.Write (this.getDatoRaiz()+" ");
+			//otros hijos recursivamente
+			for (int i = 1 ; i < this.getHijos().Count ; i++)
+				this.getHijos()[i].inOrden();
+		}
+
+		public void postOrden () {
+			//los hijos recursivamente
+			foreach (var hijos in this.getHijos())
+				hijos.postOrden();		
+			//raiz
+			Console.Write (this.getDatoRaiz()+" ");
+		}
+
+		public void porNiveles () {
+			Cola<ArbolGeneral<T>> cola = new Cola<ArbolGeneral<T>> ();
+			ArbolGeneral<T> arbolAuxiliar; //hay que poner un dato
+			//referencia nombre = nuevo objeto tipo arbol -> no instancio new arbol
+			cola.encolar(this);
+
+			while (!cola.esVacia()) {
+				arbolAuxiliar = cola.desencolar(); //saco el objeto de cola
+				Console.Write (arbolAuxiliar.getDatoRaiz() + " ");
+				foreach (ArbolGeneral<T> hijos in arbolAuxiliar.getHijos()) { //encolar hijos
+					cola.encolar(hijos);
+				}	
+			}
+		}
+		
 //Ejercicio4		
 //altura(): int devuelve la altura del árbol, es decir, la longitud del camino más largo desde el nodo raíz hasta una hoja.
 //Pista: Si el árbol es una sola hoja, se devuelve 0. 
@@ -81,9 +126,9 @@ encole los mismos. Cuando encuentra la marca de fin de nivel cuente si los eleme
 Pista: Si el nodo raíz posee el mismo dato que pasado como parámetro, se retorna 0. En caso contrario, se debe buscar en cuales de los subárbo -
 les hijos se encuentra el dato (implemente el mensaje include (Object dato) en la clase Arbol General) y se debe retornar 1 más el nivel que arroje
 enviar el mensaje nivel() al subárbol que incluye el dato.*/
-		public int profundidad(int dato) {
-	return 0;
-}
+//		public int profundidad(int dato) {
+//			if (dato == this.getDatoRaiz()) return 0;
+//}
 	
 		
 /* Ejercicio 5
