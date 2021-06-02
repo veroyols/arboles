@@ -27,16 +27,16 @@ namespace Ejercicio_4
 			ArbolGeneral <int> hijo4 = new ArbolGeneral <int> (4);
 			ArbolGeneral <int> hijo5 = new ArbolGeneral <int> (5);
 			ArbolGeneral <int> hijo6 = new ArbolGeneral <int> (6);
-			otroHijo.agregarHijo(hijo4);
-			otroHijo.agregarHijo(hijo5);
-			otroHijo.agregarHijo(hijo6);
+			unHijo.agregarHijo(hijo4);
+			unHijo.agregarHijo(hijo5);
+			unHijo.agregarHijo(hijo6);
 			
 			//nivel 3
 			ArbolGeneral <int> nivel3 = new ArbolGeneral <int> (7);
-			hijo6.agregarHijo(nivel3);
+			otroHijo.agregarHijo(nivel3);
 			
 			//nivel 4
-			nivel3.agregarHijo(new ArbolGeneral<int> (8)); //no tiene nombre de referencia
+			otroHijo.agregarHijo(new ArbolGeneral<int> (8)); //no tiene nombre de referencia
 			
 //			Para imprimir hijos
 //			foreach (ArbolGeneral<int> ele in raiz.getHijos()) {
@@ -45,17 +45,24 @@ namespace Ejercicio_4
 			
 			Console.WriteLine(raiz);
 			
+			List<int> lista = new List<int> () {3,6,9,2,5,8,0,2,1,4};
+			int i = lista.IndexOf(9);
+			foreach (int element in lista.GetRange(i, lista.Count - i)) {
+				Console.Write (element);
+			}
+			
 			Console.WriteLine ("\npreOrden");
 			raiz.preOrden();
 			
-			Console.WriteLine ("\ninOrden");
-			raiz.inOrden();
-			
-			Console.WriteLine ("\npostOrden");
-			raiz.postOrden();
-			
-			Console.WriteLine ("\nporNiveles");
-			raiz.porNiveles();
+		
+//			Console.WriteLine ("\ninOrden");
+//			raiz.inOrden();
+//			
+//			Console.WriteLine ("\npostOrden");
+//			raiz.postOrden();
+//			
+//			Console.WriteLine ("\nporNiveles");
+//			raiz.porNiveles();
 			
 			Console.WriteLine();
 			
@@ -64,9 +71,10 @@ Pista: Si el nodo raíz posee el mismo dato que pasado como parámetro, se retor
 les hijos se encuentra el dato (implemente el mensaje include (Object dato) en la clase Arbol General) y se debe retornar 1 más el nivel que arroje
 enviar el mensaje nivel() al subárbol que incluye el dato.*/
 			int dato = 6;			
-			if (dato == raiz.getDatoRaiz()) 
-				Console.WriteLine ("El dato {0} y se encuentra en la raiz", dato);
-			Console.WriteLine ("El dato {0} y no se encuentra en la raiz", dato);
+			if (dato == raiz.getDatoRaiz()) {
+				Console.WriteLine ("El dato {0} se encuentra en la raiz", dato);
+			}
+			Console.WriteLine ("El dato {0} no se encuentra en la raiz", dato);
 		
 			
 			Console.Write("Press any key to continue . . . ");

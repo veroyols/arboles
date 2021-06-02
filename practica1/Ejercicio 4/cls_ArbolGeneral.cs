@@ -34,12 +34,22 @@ namespace Ejercicio_4
 		
 		//ORDENAMIENTO
 		public void preOrden () {
-			//raiz
+		
 			Console.Write (this.getDatoRaiz()+" ");
-			//los hijos recursivamente
-			foreach (var hijos in this.getHijos())
-				hijos.preOrden();
+			Cola<ArbolGeneral<T>> hijos = new Cola<ArbolGeneral<T>> ();
+			foreach (var ele in this.getHijos()) {
+				hijos.encolar(ele);
+			}
+			while (!hijos.esVacia()) { //mientras haya hijos 
+				hijos.desencolar().preOrden();
+			}	
 		}
+		
+//		public void preOrden () {
+//			Console.Write (this.getDatoRaiz()+" ");
+//			foreach (var hijos in this.getHijos())
+//				hijos.preOrden();	
+//		}
 		
 		//ok
 		public void inOrden () {
